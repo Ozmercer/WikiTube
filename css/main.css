@@ -1,0 +1,132 @@
+body {
+    background-color: #fafafa;
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav {
+    min-width: 300px;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    height: 40px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 1px 5px #b6b6b6;
+}
+
+.logo {
+    color: red;
+}
+
+.w {
+    color: red;
+}
+
+header input {
+    width: 37vw;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+main {
+    display: flex;
+    
+}
+
+.main-video {
+    margin: 20px;
+    text-align: justify;    
+}
+
+.snippet {
+    display: flex;
+    cursor: pointer;
+    padding: 5px;
+    max-width: 300px;
+}
+
+.snippet p {
+    margin-left: 5px;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #eaeaea;
+    box-shadow: 0 1px 5px #b6b6b6;
+}
+
+footer h3 {
+    margin: 0;
+    text-align: center;
+}
+
+footer .container {
+    padding: 10px 0;
+    font-size: 1.2em;
+}
+
+footer form {
+    padding: 10px;
+}
+
+footer button {
+    width: 150px;
+}
+
+.searched {
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (min-width: 500px) {
+    iframe {
+        width: 480px;
+        height: 270px;
+    }
+    .logo-txt {
+        position: relative;
+        left: -7.5px;
+        display: inline;
+    }
+}
+
+@media (min-width: 760px) {
+    iframe {
+        width: 350px;
+        height: 200px;
+    }
+    header input {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 960px) {
+    iframe {
+        width: 520px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 760px) {
+    main > div {
+        flex-direction: column-reverse;
+    }
+
+}
+

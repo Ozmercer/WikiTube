@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/helpers.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500" rel="stylesheet">
+    <title>WikiTube</title>
+</head>
+
+<body onload="init('Oasis band')">
+    <header>
+        <div class="container flex space-between align-center">
+            <h1><a href="#"> <span class="logo"><i class="fas fa-pause-circle"></i>.W</span>
+                <span class="logo-txt" hidden>ikiTube</span></a></h1>
+            <form action="" onsubmit="return false;">
+                <input type="search" name="search" placeholder="Search">
+                <button onclick="getVideos(null)">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="container flex space-between">
+            <nav>
+                <div class="videos">
+                    <div class="snippet"></div>
+                </div>
+            </nav>
+            <div class="main-video flex column align-center">
+                <iframe width="300px" height="200px" src="https://www.youtube.com/embed/bx1Bh8ZvH84" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen>
+                </iframe>
+                <div class="wiki">
+                    <h2 class="wiki-title">TITLE</h2>
+                    <p class="wiki-desc">description</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <h3>Previously Searched</h3>
+            <div class="flex justify-center space-between align-center">
+                <button onclick="clearHistory()">Clear History</button>
+                <div class="searched"></div> 
+            </div>
+            <form action="" onsubmit="return false;">
+                <label for="theme">Change theme color</label>
+                <input type="color" name="theme" onchange="changeTheme(this)">
+            </form>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
